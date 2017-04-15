@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DotNetCoreMongoContext</id>
+    <version>0.0.0.4</version>
+    <title>.NET Core MongoDB Database Context</title>
+    <authors>Vo Son Ha</authors>
+    <owners>sonhavt89</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>https://image.ibb.co/gJ62MQ/Dot_Net_Core_Mongo_Context_Logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Database context for MongoDB. Help developer work with MongoDB easier</description>
+    <releaseNotes>
+      v0.0.0.1 : 
+      First version
+      v0.0.0.2 : 
+      Add comment for each function
+      Add GetCollection, Delete
+      v0.0.0.3 : 
+      Change Id to _id of Entity to mapping with mongdb generate
+      v0.0.0.4 :
+      Change _id to BsonId
+    </releaseNotes>
+    <copyright>Copyright @2017 Vo Son Ha</copyright>
+    <tags>mongodb .netcoremongo</tags>
+    <dependencies>
+      <dependency id="mongocsharpdriver" version="2.4.3" />
+      <dependency id="NETStandard.Library" version="1.6.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- Add a readme -->
+    <file src="readme.txt" target="" />
+    <file src="bin\Release\netstandard1.6\Pofsoft.DotNetCoreMongoRepository.dll" target="lib\netstandard1.6\Pofsoft.DotNetCoreMongoRepository.dll" />
+    <file src="bin\Release\netstandard1.6\Pofsoft.DotNetCoreMongoRepository.xml" target="lib\netstandard1.6\Pofsoft.DotNetCoreMongoRepository.xml" />
+  </files>
+</package>
