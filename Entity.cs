@@ -7,7 +7,7 @@ namespace Pofsoft.DotNetCoreMongoContext
     /// <summary>
     /// Entity, the other class will inheritance to use MongoContext
     /// </summary>
-    public abstract partial class Entity
+    public abstract class Entity
     {
         /// <summary>
         /// _id key

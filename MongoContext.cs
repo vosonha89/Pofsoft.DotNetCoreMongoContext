@@ -13,7 +13,7 @@ namespace Pofsoft.DotNetCoreMongoContext
     /// <summary>
     /// Mongo context help developer using mongoDB on application
     /// </summary>
-    public partial class MongoContext
+    public class MongoContext
     {
         private static MongoClient _client;
         private static IMongoDatabase _db;
