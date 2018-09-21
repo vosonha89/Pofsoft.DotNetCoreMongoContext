@@ -13,7 +13,7 @@ namespace Pofsoft.DotNetCoreMongoContext
     /// <summary>
     /// Mongo context help developer using mongoDB on application
     /// </summary>
-    public class MongoContext
+    public partial class MongoContext
     {
         private static MongoClient _client;
         private static IMongoDatabase _db;
@@ -93,6 +93,22 @@ namespace Pofsoft.DotNetCoreMongoContext
         public static T Get<T>(Expression<Func<T, bool>> predicate) where T : Entity
         {
             return _db.GetCollection<T>(typeof(T).Name).Find(predicate).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Check exist any document in database with condition
+        /// </summary>
+        /// <typeparam name="T">Document Type</typeparam>
+        /// <param name="predicate">Condition</param>
+        /// <returns>True if match | False if not</returns>
+        public static bool IsExist<T>(Expression<Func<T, bool>> predicate)
+        {
+            long count = _db.GetCollection<T>(typeof(T).Name).Find(predicate).Count();
+            if (count > 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
